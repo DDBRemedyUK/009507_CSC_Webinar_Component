@@ -8,7 +8,11 @@
 
 .timer {
     display: inline-block;
-    padding: 10px;
+    //padding: 10px;
+}
+
+.debug-border{
+    border: 1px solid red; //debug
 }
 
 body, html{
@@ -53,23 +57,71 @@ header{
             margin: 0 auto;
             margin-bottom: 25px;
         }
-        img{
+        img#logo{
             max-width: 30%;
             height: auto;
         }
         &#countdown{
             background-image: url('../img/CS_elite_machine_bg01.png');
             background-size: 100% auto;
+            background-size: cover;
+            background-position: center;
             min-height: 380px;
             justify-content: flex-end;
-            #timer{
+            #timer, #timertest{
                 margin-bottom: 50px;
+                .timer{
+                    &:after{
+                        content: ':';
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translatey(-65%);
+                        font-size: 50px;
+                    }
+                    &:last-child{
+                        &:after{
+                            display: none;
+                        }
+                        padding-right: 0;
+                    }
+                    text-align: center;
+                    padding-right: 10px;
+                    box-sizing: content-box;
+                    position: relative;
+                    //.debug-border;
+                }
                 .figure{
-                    color: red;
+                    font-size: 50px;
+                    display: inline-block;
+                    width: 80px;
+                    //padding: 0 20px;
                 }
                 .key{
-                    //font-size: 30%;
+                    font-size: 10px;
                 }
+            }
+        }
+    }
+}
+
+//mobile breakdowns
+@media only screen 
+and (max-width: 1024px) {
+    body, html{
+        //background: red; //debug
+    }
+    header {
+        display: block;
+        padding-top: 50px;
+        section{
+            max-width: 100%;
+            min-height: 300px;
+            img#logo{
+                max-width: 50%;
+            }
+            &#countdown{
+                margin-top: -250px;
             }
         }
     }
