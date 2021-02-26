@@ -1,0 +1,76 @@
+@import "normalize.css";
+
+@csc_navy: #002554; 
+@csc_mid_blue: #bdd6e6; 
+@csc_cool_blue: #00a9e0; 
+@csc_royal_blue: #005eb8; 
+@csc_glacier_white: #eaf5fb; 
+
+.timer {
+    display: inline-block;
+    padding: 10px;
+}
+
+body, html{
+    background: #000014;
+    *{
+        box-sizing: border-box;
+    }
+}
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    margin: 0 auto;
+    //padding: 50px;
+    padding-bottom: 0;
+    justify-content: space-between;
+    //border: 1px solid green; //debug
+    section{
+        width: 100%;
+        max-width: 49%;
+        //display: inline-block;
+        text-align: center;
+        //border: 1px solid red; //debug
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        //padding: 25px;
+        h1 span{
+            color: @csc_cool_blue;
+            &.date{
+                color: inherit;
+                margin-top: 25px;
+                font-size: 80%;
+                display: block;
+            }
+        }
+        >*{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 25px;
+        }
+        img{
+            max-width: 30%;
+            height: auto;
+        }
+        &#countdown{
+            background-image: url('../img/CS_elite_machine_bg01.png');
+            background-size: 100% auto;
+            min-height: 380px;
+            justify-content: flex-end;
+            #timer{
+                margin-bottom: 50px;
+                .figure{
+                    color: red;
+                }
+                .key{
+                    //font-size: 30%;
+                }
+            }
+        }
+    }
+}
