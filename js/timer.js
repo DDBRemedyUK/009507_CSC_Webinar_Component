@@ -25,8 +25,8 @@ var x = setInterval(function () {
     
     // Display the result in the element with id="demo"
 
-    let res = timePart(days, 'days') 
-            + timePart(hours, 'hours') 
+    let res = timePart(days, 'Days') 
+            + timePart(hours, 'Hours') 
             + timePart(minutes, 'Mins');
             //+ timePart(seconds, 'Seconds', 'white');
     
