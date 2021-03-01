@@ -22,6 +22,11 @@ body, html{
     }
 }
 
+body{
+    background-image: url('../img/bg.jpg');
+    background-size: 100% auto;
+}
+
 header{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -58,14 +63,14 @@ header{
             margin-bottom: 25px;
         }
         img#logo{
-            max-width: 30%;
+            max-width: 35%;
             height: auto;
         }
         &#countdown{
             background-image: url('../img/CS_elite_machine_bg01.png');
             background-size: 100% auto;
             background-size: cover;
-            background-position: center;
+            background-position: -32px;
             min-height: 380px;
             justify-content: flex-end;
             #timer, #timertest{
@@ -100,6 +105,14 @@ header{
                 .key{
                     font-size: 10px;
                 }
+            }
+            &:before{
+                // content: '';
+                // background: url('../img/CS_elite_machine_bg01.png');
+                // background-size: 100% auto;
+                // display: block;
+                // width: 100px;
+                // position: absolute;
             }
         }
     }
