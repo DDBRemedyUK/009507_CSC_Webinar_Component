@@ -25,6 +25,7 @@ body, html{
 body{
     background-image: url('../img/bg.jpg');
     background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 header{
@@ -68,9 +69,9 @@ header{
         }
         &#countdown{
             background-image: url('../img/CS_elite_machine_bg01.png');
-            background-size: 100% auto;
-            background-size: cover;
-            background-position: -32px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: -32px bottom;
             min-height: 380px;
             justify-content: flex-end;
             #timer, #timertest{
@@ -123,6 +124,9 @@ header{
 and (max-width: 1024px) {
     body, html{
         //background: red; //debug
+    }
+    body{
+        background-position: bottom;
     }
     header {
         display: block;
